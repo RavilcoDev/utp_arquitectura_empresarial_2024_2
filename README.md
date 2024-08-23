@@ -7,3 +7,5 @@ No es necesario instalar nada para modificar pero siquieres ir viendo como queda
 [Cómo escribir LaTeX en VS Code | Tutoriales G&O ](https://www.youtube.com/watch?v=e3LxLIRQf-c)
 
 tambien puede usar [overleaf](https://www.overleaf.com) para abrir el proyecto pero las modificaciones deben estar en este archivo.
+
+Recuerda siempre construir el pdf en una carpeta /build 
