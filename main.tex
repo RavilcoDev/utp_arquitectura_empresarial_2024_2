@@ -1,0 +1,257 @@
+% VERSIÓN: 1.1
+% ACTUALIZACIÓN: 24/03/2021
+% -----------------------------------
+
+\documentclass{article}[12pt]
+\usepackage{indentfirst}
+% \usepackage{fontspec}
+\usepackage{helvet}
+% \usepackage[spanish,es-tabla, es-ucroman]{babel}
+
+\usepackage{calc}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{pgfplotstable} 
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{enumerate} 
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{figuras/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+% \usepackage{vmargin}
+\usepackage{changepage}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+
+
+\usepackage{siunitx}
+\usepackage{hyperref}
+
+\usepackage{setspace}
+
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage[a4paper, total={6in, 8in},textheight=240mm]{geometry}
+
+
+% FUENTE
+% \setmainfont[BoldFont=fonts/arialbd.ttf,
+% ItalicFont=fonts/ariali.ttf,
+% BoldItalicFont=fonts/arialbi.ttf]{fonts/Arial.ttf}
+
+\renewcommand{\rmdefault}{phv}
+
+% Estilo BIBLIOFGRAFIA
+\bibliographystyle{abbrvnat}
+
+% CONFIGURACIÓN DE LA HOJA
+% \setmarginsrb{4 cm}{2.5 cm}{2 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{0.5 cm}
+
+% CONFIGURACIÓN DE SANGRÍA
+% \setlength{\parindent}{4mm}
+% \setlength{\parskip}{1mm}
+
+\doublespacing % Espaciado de 1.5 líneas
+
+%---------------------------------------------------------------------------
+%	EN TODAS HOJAS
+%---------------------------------------------------------------------------
+
+\title{Alicop}				    	% Titulo
+\author{Diseño e Implementación de Arquitectura Empresarial}	            % Nombre del estudiante				
+\date{\today}						        % Fecha
+
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\lhead{
+    \begin{tikzpicture}[overlay, fill]
+        \fill[ColorFondoPrimario](-4,0) rectangle(8.5,1.5);    
+        \fill[ColorFondoSecundario](9,0) rectangle(10,1.5);    
+    \end{tikzpicture} 
+}
+\rhead{
+    \begin{tikzpicture}[overlay, fill]
+        \node[] at (-0.2, 0.4) 
+    {\includegraphics[width=0.8cm,height=1cm]{./figuras/marca_agua.png}};
+    \end{tikzpicture} 
+}
+
+\rfoot{
+    \begin{tikzpicture}[overlay, fill]
+        \fill[ColorFondoSecundario](-20,-0.5) rectangle(5,-2.5);    
+    \end{tikzpicture} 
+}
+\cfoot{\thepage}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	                                CARÁTULA 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{secciones/caratula}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	                     INICIO DEL DOCUMENTO  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%% ÍNDICE GENERAL
+\tableofcontents
+\thispagestyle{empty} % quita numero de la pagina
+\newpage
+
+%%%%%%% INDICE DE FIGURAS
+\listoffigures
+\addcontentsline{toc}{section}{Índice de figuras}
+\thispagestyle{empty} % quita numero de la pagina
+\newpage
+\pagenumbering{arabic} % cera numero de la pagina
+
+%%%%%%%%%%%%%% 
+% SECCIÓN 1
+%%%%%%%%%%%%%%
+\input{secciones/cuerpo/seccion1.tex}
+
+%%%%%%%%%%%%%% 
+% SECCIÓN 2
+%%%%%%%%%%%%%%
+
+\input{secciones/cuerpo/seccion2.tex}
+
+
+%%%%%%%%%%%%%% 
+% SECCIÓN 3
+%%%%%%%%%%%%%%
+\input{secciones/cuerpo/seccion3.tex}
+%%%%%%%%%%%%%% 
+% SECCIÓN 4
+%%%%%%%%%%%%%%
+\input{secciones/cuerpo/seccion4.tex}
+
+%%%%%%%%%%%%%% 
+% SECCIÓN 5
+%%%%%%%%%%%%%%
+\input{secciones/cuerpo/seccion5.tex}
+
+%%%%%%%%%%%%%% 
+% SECCIÓN 6
+%%%%%%%%%%%%%%
+
+% %%%%%%% 1 SUBSECCIÓN %%%%%%
+% \subsection{Sobre las figuras}
+% Las figuras deben cumplir con los siguientes criterios: \\
+
+% \begin{itemize}
+% \item Estar numeradas y con título en la parte inferior del texto.
+% \item Deben ser explicadas y citadas con su respectivo numero antes de su presentación en el documento. 
+% \item Tener buena resolución. En el caso en que hayan texto, este debe estar en el idioma local.
+% \item Ser citadas con su respectivo número antes de su presentación en el documento. 
+% \item Las gráficas deben tener los ejes con título, unidades de medida y leyendas si necesario. El tamaño del título de los ejes y de la leyenda deben ser visibles al lector.\\
+% \end{itemize} 
+
+% La Figura \ref{fig:logo} muestra un ejemplo.
+
+% \begin{figure}[!ht]
+% \centering
+% \includegraphics[width=0.2\textwidth]{figuras/Isotipo_NEGRO.png}
+% \caption{Logo UTEC}
+% \label{fig:logo}
+% \end{figure}
+
+% %%%%%%% 2 SUBSECCIÓN %%%%%%
+
+% \subsection{Sobre las tablas}
+% Sigue algunos criterios a tener en cuenta en el momento de presentar tablas:\\
+
+% \begin{itemize}
+% \item Deben estar numeradas y con título en la parte inferior del texto.
+% \item Deben ser explicadas y citadas con su respectivo número antes de su presentación en el documento. 
+% \item Las magnitudes de estudio deben estar identificadas (ej. datos, sitio, potencia, y otros), acompañada de su unidad de medida siempre que haya. En caso de que se utilicen símbolos, estos deben ser explicados en el texto. 
+% \item Los valores  deben ser escritos teniendo en cuenta las cifras significativas que indique el docente responsable.
+% \item Para números muy grandes o pequeños se debe usar notación científica.\\
+% \end{itemize}
+
+% Ejemplos:
+
+% \begin{table}[htb]
+% \begin{center}
+% \renewcommand\arraystretch{1.3}
+% \centering
+% \begin{tabular} {c c c c}
+%  \hline
+% N° & t (s) & I (W/m$^{2}$) & d (m)\\
+%  \hline
+% 1 & 1,23 & 4200 & 1,20\\
+% 2 & 1,25 & 3997 & 1,50\\
+% 3 & 1,23 & 4200 & 1,20\\
+%  \hline
+%  \end{tabular}
+%  \caption{Valores experimentales de la práctica X}
+% \label{ta:tab1}
+%     \end{center}
+%  \end{table}
+ 
+% \begin{table}[htb]
+% \begin{center}
+% \begin{tabular}{l c c}
+% \hline
+% Mes & $\mathrm{HSP_{PH} (h)}$ & $\mathrm{HSP_{PI} (hrs)}$ \\
+% \hline
+% Enero & 224 & 213\\ 
+% Julio & 224 & 213\\ 
+% Diciembre & 224 & 213\\ 
+% \hline
+% \end{tabular}
+% \caption{Ejemplo 2 de tabla}
+%     \end{center}
+% \label{tab:ValoresHSP}
+% \end{table}
+
+% %%%%%%%%%%%%%% 
+% % SECCIÓN 7
+% %%%%%%%%%%%%%%
+% \section{Conclusiones}
+% Este sección debe cerrar la propuesta del trabajo. Algunos criterios para la redacción: \\
+
+% \begin{itemize}
+% \item Ser objetivo. 
+% \item Retomar la propuesta inicial y vincular con los resultados obtenidos.
+% \item Realizar un análisis critico, proponer mejoras y estudios futuros.
+% \end{itemize}
+
+% %%%%%%%%%%%%%% 
+% % SECCIÓN 8
+% %%%%%%%%%%%%%%
+% \section{Características de la bibliografía}
+% La sección bibliográfica debe estar ordenada alfabéticamente por apellido del autor. Se recomienda la utilización del formato APA (American Psychological Association).
+
+% %%%%%%%%%%%%%% 
+% % SECCIÓN 9
+% %%%%%%%%%%%%%%
+% \section{Características de los anexos}
+
+% \begin{itemize}
+% \item Pueden ser documentos de distinta índole, que aporten información complementaria o aclaratoria de cierto aspecto de la obra. 
+% \item Si fueron extraídos de fuentes consultadas, se deberán incluir sus referencias. 
+% \item Deben estar incorporados en el orden en que fueron mencionados en el desarrollo del trabajo.
+% \end{itemize}
+
+
+\end{document}

@@ -1,0 +1,67 @@
+\pgfplotsset{compat=1.16}
+% CARÁTULA
+\definecolor{ColorPrimario}{RGB}{233  103  103}
+\definecolor{ColorSecundario}{RGB}{120 185 40}
+\definecolor{ColorFondoPrimario}{RGB}{233  103  103}
+\definecolor{ColorFondoSecundario}{RGB}{145  214  92}
+\begin{titlepage}
+  \thispagestyle{empty}
+  \newgeometry{left=2cm, right=1cm, top=2cm, bottom=2cm}
+
+  \begin{tikzpicture}[overlay,fill]
+    \fill[ColorFondoPrimario](-5,10) rectangle(20,-35);    
+  \end{tikzpicture}
+  
+  \begin{tikzpicture}[remember picture,overlay]
+    % draw image
+    \node[draw] at (11.5, -10) 
+    {\includegraphics[width=16cm,height=22cm]{./figuras/background_alicorp.jpg}};
+  \end{tikzpicture}
+  
+  \begin{tikzpicture}[overlay, fill,opacity=0.95]
+    \fill[ColorFondoPrimario](-2.5,-28) rectangle(8.5,5);    
+    \fill[white](-2.5, 1.5) rectangle(20,2);    
+    \fill[white](-2.5,-17.5) rectangle(20,-18);    
+    \fill[ColorFondoSecundario](-2.5,-28) rectangle(20,-18);    
+  \end{tikzpicture}  
+
+
+  \vspace{3 cm}
+
+  \begin{minipage}{11cm}   
+
+    \begin{flushleft}                               %alineado a ezquierda
+    
+    \Large \bfseries \textcolor{white}{DISEÑO E\\[0.1 cm] IMPLEMENTACIÓN DE LA }\\
+    \Huge \bfseries \textcolor{white}{ARQUITECTURA EMPRESARIAL}\\
+    
+    \end{flushleft}
+
+  \end{minipage}
+  \vspace{\fill}
+
+  %NOMBRE DE AUTOR
+  \begin{minipage}{13cm}
+    
+    \begin{spacing}{1}
+      \LARGE
+      \begin{itemize}
+        \item {Amaut Guzmán, Marcelo Fabian }
+        \item {Baldeon Peña, Juancarlos }
+        \item {Hernandez Ormeño, Roberth Alessandre }
+        \item {Livise Larico, Rafael Enrique }
+      \end{itemize}
+    \end{spacing}
+  \end{minipage}
+  \begin{minipage}{4.5cm}
+    \LARGE
+    \begin{spacing}{1}
+      \vspace{0.8cm}
+      {U21230026}\\
+      {U21201859}\\
+      {1625004}\\
+      {U17305723}\\
+    \end{spacing}
+  \end{minipage}
+
+\end{titlepage}
