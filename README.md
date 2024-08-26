@@ -19,7 +19,7 @@ agrega la figura en la carpeta en figura con un nombre entendible y luego llamal
 ```[latex]
 \begin{figure}[!ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{./figuras/producto_insuma_app.png}
+    \includegraphics[width=0.8\textwidth]{producto_insuma_app.png}
     \caption{App insuma para la logistica entre clientes}
 \end{figure}
 ```
