@@ -22,6 +22,8 @@
 
 \usepackage[a4paper, total={6in, 8in},textheight=240mm]{geometry}
 
+\usepackage{titlesec}
+\usepackage{tocloft}
 
 \usepackage{indentfirst}
 \usepackage{helvet}
@@ -74,6 +76,22 @@
 \cfoot{\thepage}
 
 \begin{document}
+
+
+
+\titleformat{\section}
+  {\normalfont\fontsize{12}{14}\bfseries} % Tamaño de la fuente (12pt) y espacio entre líneas (14pt)
+  {\thesection} % Etiqueta
+  {1em} % Espacio entre la etiqueta y el título
+  {} % Texto adicional antes del título (vacío)
+
+
+% Configuración para numerar hasta \subparagraph
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
